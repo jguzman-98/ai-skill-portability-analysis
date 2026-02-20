@@ -2,7 +2,7 @@
 
 ---
 
-## 1. What is your treatment or intervention?
+## 1. Treatment and intervention
 
 The treatment is **exposure to generative AI capabilities**, triggered by the public release of ChatGPT in November 2022 and the rapid proliferation of large language model tools that followed. This is not a binary treatment — it varies continuously across occupations based on the degree to which each occupation's tasks can be performed or assisted by AI. I measure treatment intensity using an AI task exposure index (derived from OpenAI data) that captures the share of an occupation's tasks that overlap with current AI capabilities.
 
@@ -10,7 +10,7 @@ Critically, the treatment is not randomly assigned. Occupations were "pre-assign
 
 ---
 
-## 2. What is your main outcome variable?
+## 2. Main outcome variable
 
 The main outcome is the **percent change in occupation-level employment** between the pre-period (average of 2018, 2019, and 2021) and the post-period (average of 2023–2025), constructed from CPS monthly data. This captures net employment changes at the occupation level — reflecting both job losses from displacement and any offsetting job creation or worker inflows.
 
@@ -18,7 +18,7 @@ I exclude 2020 from the pre-period baseline to avoid conflating COVID-related di
 
 ---
 
-## 3. What is your comparison/control group?
+## 3. Comparison/control group?
 
 There is no clean binary control group. Instead, identification comes from **continuous variation in treatment intensity** across occupations. Occupations with low AI task exposure serve as the implicit comparison for those with high exposure.
 
@@ -33,7 +33,7 @@ This is conceptually similar to a difference-in-differences framework with conti
 
 ---
 
-## 4. What time periods do you have data for?
+## 4. Time periods of data
 
 | Period | Years | Role |
 |--------|-------|------|
@@ -48,7 +48,7 @@ The post-period is relatively short (roughly 2.5 years of post-treatment data), 
 
 ---
 
-## 5. What are the main threats to identification?
+## 5. Main threats to identification?
 
 **a. Confounding demand shocks.** Employment changes between the pre- and post-period may reflect demand shifts unrelated to AI — for example, post-COVID recovery patterns, interest rate changes affecting housing/construction, or shifts in consumer spending. If these shocks are correlated with AI exposure, the estimated effect of AI is biased. *Mitigation:* Controlling for pre-trends and broad occupation category fixed effects; the interaction term (AI × portability) is less vulnerable than the main effect because it would require the confound to differentially affect high- vs. low-portability occupations within exposure levels.
 
@@ -64,7 +64,7 @@ The post-period is relatively short (roughly 2.5 years of post-treatment data), 
 
 ---
 
-## 6. Which method fits your setting, and why?
+## 6. Methodology
 
 The setting most naturally fits a **cross-sectional regression with continuous treatment intensity and a moderating variable** — conceptually related to a difference-in-differences design but without a strict binary treatment or parallel trends assumption.
 
@@ -90,3 +90,4 @@ This approach is appropriate because:
 4. **The interaction term is the key test** — even if the main effect of AI exposure is confounded, the differential effect by portability is harder to explain with alternative stories (a confounder would need to differentially affect high- vs. low-portability occupations within exposure groups)
 
 **Limitations of this approach:** It does not establish a causal effect of AI on employment. The design is better suited to answering the *conditional* question — "among occupations affected by AI, does portability predict who adjusts better?" — than the *unconditional* question of whether AI reduces employment overall. This is acknowledged in the paper and is consistent with the stated research goal.
+
